@@ -1,5 +1,7 @@
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
+const reiniciar = document.getElementById('reiniciar');
+const fim = false
 
 const jump = () =>{
     mario.classList.add("jump");
@@ -8,6 +10,7 @@ const jump = () =>{
         mario.classList.remove("jump");
     }, 500)
 }
+
 
 const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
@@ -25,9 +28,15 @@ const loop = setInterval(() => {
         mario.style.left = "50px";
 
         clearInterval(loop);
+        fim = true;
+        if (fim == true) {
+            window.location.reload();
+        };
 
-    }
+    };
 
 }, 10);
+
+
 
 document.addEventListener("keydown", jump);
