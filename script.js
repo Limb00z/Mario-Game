@@ -1,7 +1,7 @@
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
 const reiniciar = document.getElementById('reiniciar');
-const fim = false
+var fim = false
 
 const jump = () =>{
     mario.classList.add("jump");
