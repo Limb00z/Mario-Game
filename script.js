@@ -1,7 +1,7 @@
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
 const reiniciar = document.getElementById('reiniciar');
-var fim = false
+
 
 const jump = () =>{
     mario.classList.add("jump");
@@ -28,10 +28,12 @@ const loop = setInterval(() => {
         mario.style.left = "50px";
 
         clearInterval(loop);
-        fim = true;
-        if (fim == true) {
-            window.location.reload();
-        };
+        
+        setTimeout(() => {
+           window.location.reload(); 
+         }, 1500);
+            
+        
 
     };
 
